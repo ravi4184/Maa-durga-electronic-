@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maa Durga Electronic</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f4f6f8; }
+    header { background:#0a3d62; color:#fff; padding:15px; display:flex; justify-content:space-between; align-items:center; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+    .lang-btn { background:#fbc531; border:none; padding:6px 10px; cursor:pointer; }
+    .container { padding:20px; }
+    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+    .card { background:#fff; padding:15px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    footer { background:#0a3d62; color:#fff; text-align:center; padding:10px; margin-top:30px; }
+    button { background:#0a3d62; color:#fff; border:none; padding:8px 12px; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2 id="title">Maa Durga Electronic</h2>
+  <nav>
+    <a href="#" id="navHome">Home</a>
+    <a href="#products" id="navShop">Shop</a>
+    <a href="#about" id="navAbout">About</a>
+    <a href="#contact" id="navContact">Contact</a>
+    <button class="lang-btn" onclick="toggleLang()">हिंदी / English</button>
+  </nav>
+</header>
+
+<div class="container">
+  <h1 id="welcome">Welcome to Maa Durga Electronic</h1>
+  <p id="tagline">Best electronic products at best price</p>
+
+  <h2 id="shopTitle">Our Products</h2>
+  <div class="products" id="products">
+    <div class="card">
+      <h3 id="p1">LED TV</h3>
+      <p>₹25,000</p>
+      <button id="buy">Buy Now</button>
+    </div>
+    <div class="card">
+      <h3 id="p2">Refrigerator</h3>
+      <p>₹18,000</p>
+      <button id="buy2">Buy Now</button>
+    </div>
+  </div>
+
+  <h2 id="about">About Us</h2>
+  <p id="aboutText">We sell genuine electronic products with warranty.</p>
+
+  <h2 id="contact">Contact Us</h2>
+  <p>📞 9XXXXXXXXX</p>
+  <p>📍 Saharsa, Bihar</p>
+</div>
+
+<footer>
+  <p>© 2025 Maa Durga Electronic</p>
+</footer>
+
+<script>
+let hindi = false;
+function toggleLang() {
+  hindi = !hindi;
+  document.getElementById('welcome').innerText = hindi ? 'माँ दुर्गा इलेक्ट्रॉनिक में आपका स्वागत है' : 'Welcome to Maa Durga Electronic';
+  document.getElementById('tagline').innerText = hindi ? 'सर्वश्रेष्ठ दामों पर इलेक्ट्रॉनिक सामान' : 'Best electronic products at best price';
+  document.getElementById('shopTitle').innerText = hindi ? 'हमारे उत्पाद' : 'Our Products';
+  document.getElementById('p1').innerText = hindi ? 'एलईडी टीवी' : 'LED TV';
+  document.getElementById('p2').innerText = hindi ? 'फ्रिज' : 'Refrigerator';
+  document.getElementById('about').innerText = hindi ? 'हमारे बारे में' : 'About Us';
+  document.getElementById('aboutText').innerText = hindi ? 'हम गारंटी के साथ असली इलेक्ट्रॉनिक सामान बेचते हैं।' : 'We sell genuine electronic products with warranty.';
+}
+</script>
+
+</body>
+</html>
